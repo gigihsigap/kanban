@@ -1,7 +1,5 @@
 # kanban
 
-# fancy-todo
-
 Fancy Todo is a simple web-app to manage your to do list.
 
 Fitur:
