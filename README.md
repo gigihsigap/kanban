@@ -20,11 +20,11 @@ Fitur:
 
 | Method | Header | Params | Data                                                      |
 | ------ | ------ | ------ | --------------------------------------------------------- |
-| `POST` | `none` | `none` | name: `string`<br>email: `string` <br> password: `string` |
+| `POST` | `none` | `none` | username: `string`<br>email: `string` <br> password: `string` |
 
 | Success Response                                           | Error Response                                               |
 | ---------------------------------------------------------- | ------------------------------------------------------------ |
-| Status: `201` <br> Content: `{_id, name, email, password}` | Status: `400` <br> Content: `{"error": ["email already registered","not a valid email" ]}` |
+| Status: `201` <br> Content: `{username, email, password}` | Status: `400` <br> Content: `{"error": [various error messages]}` |
 
 
 - **/login**
@@ -62,7 +62,7 @@ This end point need authentication (sometimes authorization as well) from verifi
 
 | Success Response                               | Error Response                                               |
 | ---------------------------------------------- | ------------------------------------------------------------ |
-| Status: `200` <br> Content: `array of objects` | Status: `403` <br> Content: `{"message": "Jwt must be provided"}` |
+| Status: `200` <br> Content: `array of objects` | Status: `400` <br> Content: `{"message": "You're not authenticated to do that!"}` |
 
 - **/kanban/**
   Create a card for authenticated user.
@@ -73,7 +73,7 @@ This end point need authentication (sometimes authorization as well) from verifi
 
 | Success Response                             | Error Response                                               |
 | -------------------------------------------- | ------------------------------------------------------------ |
-| Status: `200` <br> Content: `object of todo` | Status: `403` <br> Content: `{"error": "Task name cannot be empty!"}` |
+| Status: `200` <br> Content: `object of kanban card data` | Status: `400` <br> Content: `{"error": "Task name cannot be empty!"}` |
 
 - **/kanban/:id**
   Update card's data.  This end point need authorization from verified user.
@@ -84,7 +84,7 @@ This end point need authentication (sometimes authorization as well) from verifi
 
 | Success Response                                      | Error Response                                     |
 | ----------------------------------------------------- | -------------------------------------------------- |
-| Status: `200` <br> Content: `object of updated data}` | Status: `400` <br> Content: `{"message": "error"}` |
+| Status: `200` <br> Content: `object of updated data}` | Status: `404` <br> Content: `{"message": "Data not found!"}` |
 
 
 - **/kanban/:id**
@@ -96,9 +96,9 @@ This end point need authentication (sometimes authorization as well) from verifi
 
 | Success Response                                     | Error Response                                     |
 | ---------------------------------------------------- | -------------------------------------------------- |
-| Status: `200` <br> Content: `object of deleted data` | Status: `404` <br> Content: `{"message": "error"}` |
+| Status: `200` <br> Content: `object of deleted data` | Status: `400` <br> Content: `{"message": "You're not authorized to delete this entry!"}` |
 
 ## Deploy
 
-Server goes here: https://arcane-thicket-63347.herokuapp.com/ 
-Client goes here: https://kanban-app-a9784.firebaseapp.com/
+- Server goes here: https://arcane-thicket-63347.herokuapp.com/ 
+- Client goes here: https://kanban-app-a9784.firebaseapp.com/
