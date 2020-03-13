@@ -96,4 +96,4 @@ This end point need authentication (sometimes authorization as well) from verifi
 ## Deploy
 
 - Server goes here: https://arcane-thicket-63347.herokuapp.com/ 
-- Client goes here: https://kanban-app-a9784.firebaseapp.com/
+- Client goes here: https://kanban-2f4a9.firebaseapp.com/
