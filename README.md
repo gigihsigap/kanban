@@ -1,16 +1,13 @@
 # kanban
 
-Fancy Todo is a simple web-app to manage your to do list.
+Kanban is a tool to visualize and manage work flow. This Kanban App has 4 columns, with no limitation to how many cards that can be added (although it is recommended to keep the numbers low).
 
-Fitur:
+Features:
 
-1. Add todo list in your main page.
-2. Show all of your todo list.
-3. Update your todo list by mark as completed.
-4. Delete your todo list.
-5. Give you a random quote to motivate your day.
+1. Manage your kanban cards.
+2. Google Sign-in.
 
- Here's the documentation:
+ And here's the documentation:
 
 ## User
 
