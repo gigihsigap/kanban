@@ -50,7 +50,7 @@ export default {
     },
     data: function () {
         return {
-            BASE_URL: 'http://127.0.0.1:3000',
+            BASE_URL: 'https://arcane-thicket-63347.herokuapp.com',
             RT_DATA: '',
             isLogin: localStorage.getItem('token') ? true : false,
         }

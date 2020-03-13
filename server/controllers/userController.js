@@ -54,7 +54,7 @@ class Controller {
         let email = null;
         client.verifyIdToken({
             idToken: req.body.token,
-            audience: "27149424737-538hern4a576888v0c6qoqhofhlvet36.apps.googleusercontent.com"
+            audience: "820472342497-c4uth85a3qr84klei1utu9v4qqig99tc.apps.googleusercontent.com"
         })
         .then(ticket => {
             email = ticket.getPayload().email
